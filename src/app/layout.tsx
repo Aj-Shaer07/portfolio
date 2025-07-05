@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Reactfolio | A Portfolio for Creative Developers',
-  description: 'A portfolio webpage built with Next.js, React, and TypeScript, featuring an interactive UI and AI-powered bio generator.',
+  title: 'Portfolio | Ajay Sharma',
+  description: 'The portfolio of Ajay Sharma, a creative developer specializing in React, Next.js, and modern web technologies.',
 };
 
 export default function RootLayout({

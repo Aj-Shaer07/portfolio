@@ -8,7 +8,7 @@ export default function Header() {
         <div className="mr-4 flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <span className="font-bold sm:inline-block font-headline">
-              Reactfolio
+              Portfolio
             </span>
           </Link>
           <nav className="hidden sm:flex items-center space-x-6 text-sm font-medium">
