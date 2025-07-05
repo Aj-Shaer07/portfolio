@@ -75,7 +75,7 @@ export default {
          aurora: {
           purple: 'rgb(82,39,255)',
           green: 'rgb(124,255,103)',
-          'new-purple': 'rgb(82,39,255)',
+          violet: 'rgb(138, 43, 226)',
         }
       },
       borderRadius: {
