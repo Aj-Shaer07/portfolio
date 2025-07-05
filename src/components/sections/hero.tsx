@@ -8,12 +8,15 @@ export default function Hero() {
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
           <div className="flex flex-col justify-center space-y-4">
-            <div className="space-y-2">
-              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline">
-                Hi, I am Ajay Sharma, undergrad student of the 2028-NITK batch
+            <div className="space-y-4">
+              <h1 className="text-4xl font-bold tracking-tighter sm:text-6xl xl:text-7xl/none font-headline">
+                Ajay Sharma
               </h1>
+              <p className="text-xl font-medium text-accent md:text-2xl">
+                AI Student & Developer
+              </p>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                I design and build beautiful and functional web applications. Explore my work and let's create something amazing together.
+                A student at NITK Surathkal (Class of 2028), passionate about Artificial Intelligence, development, and building innovative projects.
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
