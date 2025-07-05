@@ -14,12 +14,23 @@ export const AuroraBackground = ({
   showRadialGradient = true,
   ...props
 }: AuroraBackgroundProps) => {
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const { currentTarget: target } = e;
+    const rect = target.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    target.style.setProperty("--mouse-x", `${x}px`);
+    target.style.setProperty("--mouse-y", `${y}px`);
+  };
+
   return (
     <div
       className={cn(
         "relative min-h-dvh bg-transparent transition-bg",
         className
       )}
+      onMouseMove={handleMouseMove}
       {...props}
     >
       <div className="absolute inset-0 overflow-hidden">
@@ -37,8 +48,8 @@ export const AuroraBackground = ({
             blur-[100px]
             will-change-transform
 
-            [background-image:radial-gradient(at_20%_40%,var(--aurora-color-1)_0px,transparent_50%),radial-gradient(at_80%_20%,var(--aurora-color-2)_0px,transparent_50%),radial-gradient(at_60%_80%,var(--aurora-color-3)_0px,transparent_50%)]
-            animate-aurora
+            [background-image:radial-gradient(at_var(--mouse-x)_var(--mouse-y),var(--aurora-color-1)_0px,transparent_50%),radial-gradient(at_calc(var(--mouse-x)-200px)_calc(var(--mouse-y)+100px),var(--aurora-color-2)_0px,transparent_50%),radial-gradient(at_calc(var(--mouse-x)+200px)_calc(var(--mouse-y)-100px),var(--aurora-color-3)_0px,transparent_50%)]
+            transition-all duration-1000 ease-out
             `
           )}
         ></div>
