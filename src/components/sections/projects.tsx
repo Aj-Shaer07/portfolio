@@ -33,7 +33,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="w-full py-20 md:py-32">
+    <section id="projects" className="w-full py-20 md:py-32 bg-transparent">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">

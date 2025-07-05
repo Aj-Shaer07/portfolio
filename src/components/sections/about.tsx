@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section id="about" className="w-full py-20 md:py-32 bg-transparent">
       <div className="container px-4 md:px-6">
-        <div className="grid gap-10 md:grid-cols-2 md:gap-16 items-center">
+        <div className="grid gap-10 md:grid-cols-2 md:gap-16 items-center bg-card/50 backdrop-blur-sm p-8 rounded-lg border border-border/20 shadow-lg">
           <div className="space-y-6">
             <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground font-headline">
               About Me

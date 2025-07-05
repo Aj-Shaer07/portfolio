@@ -15,7 +15,7 @@ export default function ProjectCard({ title, description, imageUrl, imageHint, l
   const CardContentWrapper = link ? Link : 'div';
 
   return (
-    <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+    <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col bg-card/50 backdrop-blur-sm">
        <CardContentWrapper href={link || '#'} target="_blank" rel="noopener noreferrer" className="flex flex-col flex-grow">
           <div className="aspect-video relative overflow-hidden">
             <Image
@@ -26,7 +26,7 @@ export default function ProjectCard({ title, description, imageUrl, imageHint, l
               data-ai-hint={imageHint}
             />
           </div>
-          <div className="p-6 flex flex-col flex-grow bg-card">
+          <div className="p-6 flex flex-col flex-grow">
             <CardTitle className="font-headline text-2xl mb-2">{title}</CardTitle>
             <CardDescription className="flex-grow">{description}</CardDescription>
             {link && (
