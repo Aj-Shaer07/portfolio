@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Github, Linkedin, Instagram, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -11,20 +11,20 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} All rights reserved.</p>
           </div>
           <div className="flex items-center space-x-4">
-             <a href="mailto:hello@yourdomain.com" className="text-muted-foreground hover:text-accent transition-colors">
+             <a href="mailto:ajaysharmasam.241ai002@nitk.edu.in" className="text-muted-foreground hover:text-accent transition-colors">
                 <Mail className="w-5 h-5" />
                 <span className="sr-only">Email</span>
               </a>
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
+              <Link href="https://github.com/Aj-Shaer07" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
                 <Github className="w-5 h-5" />
                 <span className="sr-only">GitHub</span>
               </Link>
-              <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
+              <Link href="https://www.linkedin.com/in/ajayshaersamb070692" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
                 <Linkedin className="w-5 h-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
-                <Twitter className="w-5 h-5" />
+              <Link href="https://instagram.com/ajay._.2907" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
+                <Instagram className="w-5 h-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
           </div>

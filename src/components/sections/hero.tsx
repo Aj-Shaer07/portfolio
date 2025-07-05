@@ -12,10 +12,10 @@ export default function Hero() {
               Ajay Sharma
             </h1>
             <p className="text-xl font-medium text-accent md:text-2xl">
-              AI Student & Developer
+              AI Student & Learnaholic
             </p>
             <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl">
-              A student at NITK Surathkal (Class of 2028), passionate about Artificial Intelligence, development, and building innovative projects.
+              A student at NITK Surathkal (Class of 2028), passionate about Artificial Intelligence, development, R&D, and building innovative projects.
             </p>
           </div>
           <div className="flex flex-col gap-3 min-[400px]:flex-row">
