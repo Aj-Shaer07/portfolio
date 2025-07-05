@@ -42,7 +42,7 @@ export default function Skills() {
         </div>
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
           {skillsData.map((category) => (
-            <Card key={category.category} className="bg-card/50 backdrop-blur-sm">
+            <Card key={category.category} className="bg-card/50 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
               <CardHeader className="flex flex-row items-center gap-4">
                 {category.icon}
                 <CardTitle className="font-headline text-2xl">{category.category}</CardTitle>
