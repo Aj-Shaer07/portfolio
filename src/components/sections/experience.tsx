@@ -38,37 +38,53 @@ export default function Experience() {
           </p>
         </div>
 
-        <div className="relative w-full">
-          {/* Desktop timeline line */}
-          <div className="hidden md:block absolute top-6 left-0 w-full h-0.5 bg-border"></div>
-          
-          <div className="grid md:grid-cols-3 gap-y-12 md:gap-x-8">
-            {experienceData.map((item, index) => (
-              <div key={index} className="flex md:flex-col md:items-center gap-6 md:gap-0 relative">
-                {/* Mobile Line & Dot */}
-                <div className="md:hidden flex flex-col items-center mr-4">
-                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center z-10">
-                      {item.icon}
-                    </div>
-                   <div className="flex-grow w-px bg-border -mb-12"></div>
+        {/* Mobile View */}
+        <div className="md:hidden space-y-12">
+          {experienceData.map((item, index) => (
+            <div key={index} className="flex gap-6">
+              <div className="flex flex-col items-center">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center z-10">
+                  {item.icon}
                 </div>
-
-                {/* Desktop dot */}
-                <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-primary items-center justify-center border-4 border-background z-10">
-                    <div className="flex items-center justify-center h-full w-full">
-                        {item.icon}
-                    </div>
-                </div>
-
-                {/* Card Content */}
-                <div className="flex flex-col space-y-2 text-left md:text-center pt-0 md:pt-20">
-                  <p className="font-mono text-sm text-muted-foreground">{item.date}</p>
-                  <h3 className="font-headline text-xl font-semibold">{item.title}</h3>
-                  <p className="text-sm font-medium text-accent">{item.company}</p>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
-                </div>
+                {index < experienceData.length - 1 && (
+                  <div className="w-px h-full bg-border"></div>
+                )}
               </div>
-            ))}
+              <div className="flex flex-col space-y-1">
+                <p className="font-mono text-sm text-muted-foreground">{item.date}</p>
+                <h3 className="font-headline text-xl font-semibold">{item.title}</h3>
+                <p className="text-sm font-medium text-accent">{item.company}</p>
+                <p className="text-sm text-muted-foreground">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop View */}
+        <div className="hidden md:block relative w-full pt-12 pb-12">
+          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2"></div>
+          <div className="relative flex justify-around items-start w-full">
+            {experienceData.map((item, index) => {
+              const isAbove = index % 2 !== 0;
+              return (
+                <div key={index} className="relative flex flex-col items-center group w-1/3">
+                  <div className={`w-72 text-center transition-transform duration-300 group-hover:-translate-y-2 ${isAbove ? 'order-1 mb-16' : 'order-3 mt-16'}`}>
+                     <div className="flex flex-col space-y-2 p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-border/20 shadow-lg">
+                        <p className="font-mono text-sm text-muted-foreground">{item.date}</p>
+                        <h3 className="font-headline text-xl font-semibold">{item.title}</h3>
+                        <p className="text-sm font-medium text-accent">{item.company}</p>
+                        <p className="text-sm text-muted-foreground">{item.description}</p>
+                      </div>
+                  </div>
+                  
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-primary flex items-center justify-center border-4 border-background z-10 order-2">
+                    {item.icon}
+                  </div>
+                  
+                  <div className={`absolute left-1/2 -translate-x-1/2 w-0.5 h-16 bg-border ${isAbove ? 'top-1/2 -translate-y-full' : 'top-1/2'}`}></div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
