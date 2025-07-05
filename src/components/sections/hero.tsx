@@ -10,7 +10,7 @@ export default function Hero() {
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline">
-                Hi, I'm a Creative Developer
+                Hi, I am Ajay Sharma, undergrad student of the 2028-NITK batch
               </h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
                 I design and build beautiful and functional web applications. Explore my work and let's create something amazing together.

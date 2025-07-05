@@ -14,9 +14,6 @@ export default function About() {
             </h2>
             <div className="space-y-4 text-muted-foreground md:text-lg/relaxed">
               <p>
-                I am Ajay Sharma, undergrad student of the 2028-NITK batch
-              </p>
-              <p>
                 I am currently pursuing my B.Tech in Artificial Intelligence and i am passionate about technology and innovation involving other branches of Engineering. I love to explore new ideas and work on projects that challenge my skills.
               </p>
               <p>
