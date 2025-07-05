@@ -64,16 +64,24 @@ export default function Experience() {
         <div className="hidden md:block">
             <div className="relative w-full py-16">
                 <div className="absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2"></div>
-                <div className="relative flex justify-between w-full">
+                <div className="grid grid-cols-3 gap-8">
                     {experienceData.map((item, index) => {
                         const isAbove = index % 2 === 0;
                         return (
-                            <div key={index} className="relative flex justify-center w-1/3">
-                                <div className={`absolute left-1/2 -translate-x-1/2 w-0.5 bg-border ${isAbove ? 'h-16 bottom-1/2' : 'h-16 top-1/2'}`}></div>
-                                <div className="absolute top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-primary flex items-center justify-center border-4 border-background z-10">
+                            <div key={index} className="relative">
+                                {/* Spacer to create height for the grid cell */}
+                                <div className="h-40"></div>
+
+                                {/* Icon on the timeline */}
+                                <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-primary flex items-center justify-center border-4 border-background z-10">
                                     {item.icon}
                                 </div>
-                                <div className={`w-72 text-center transition-transform duration-300 ${isAbove ? 'hover:-translate-y-2 absolute bottom-[calc(50%_+_2.5rem)]' : 'hover:translate-y-2 absolute top-[calc(50%_+_2.5rem)]'}`}>
+
+                                {/* Vertical connector */}
+                                <div className={`absolute left-1/2 -translate-x-1/2 w-0.5 bg-border ${isAbove ? 'h-10 bottom-[calc(50%_+_1.5rem)]' : 'h-10 top-[calc(50%_+_1.5rem)]'}`}></div>
+
+                                {/* Content Card */}
+                                <div className={`absolute w-full px-2 text-center transition-transform duration-300 ${isAbove ? 'bottom-[calc(50%_+_4.5rem)] hover:-translate-y-2' : 'top-[calc(50%_+_4.5rem)] hover:translate-y-2'}`}>
                                     <div className="p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-border/20 shadow-lg">
                                         <p className="font-mono text-sm text-muted-foreground">{item.date}</p>
                                         <h3 className="font-headline text-xl font-semibold">{item.title}</h3>
