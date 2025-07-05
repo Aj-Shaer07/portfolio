@@ -54,7 +54,7 @@ export default function Experience() {
                 <p className="font-mono text-sm text-muted-foreground">{item.date}</p>
                 <h3 className="font-headline text-xl font-semibold">{item.title}</h3>
                 <p className="text-sm font-medium text-accent">{item.company}</p>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
+                <p className="text-muted-foreground">{item.description}</p>
               </div>
             </div>
           ))}
@@ -65,10 +65,9 @@ export default function Experience() {
           <div className="absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2"></div>
           <div className="relative flex justify-around items-start w-full">
             {experienceData.map((item, index) => {
-              const isAbove = index % 2 !== 0;
               return (
                 <div key={index} className="relative flex flex-col items-center group w-1/3">
-                  <div className={`w-72 text-center transition-transform duration-300 group-hover:-translate-y-2 ${isAbove ? 'order-1 mb-16' : 'order-3 mt-16'}`}>
+                  <div className="w-72 text-center order-3 mt-16 transition-transform duration-300 group-hover:-translate-y-2">
                      <div className="flex flex-col space-y-2 p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-border/20 shadow-lg">
                         <p className="font-mono text-sm text-muted-foreground">{item.date}</p>
                         <h3 className="font-headline text-xl font-semibold">{item.title}</h3>
@@ -81,7 +80,7 @@ export default function Experience() {
                     {item.icon}
                   </div>
                   
-                  <div className={`absolute left-1/2 -translate-x-1/2 w-0.5 h-16 bg-border ${isAbove ? 'top-1/2 -translate-y-full' : 'top-1/2'}`}></div>
+                  <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-16 bg-border top-1/2"></div>
                 </div>
               );
             })}
