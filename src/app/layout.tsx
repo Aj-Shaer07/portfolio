@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { AuroraBackground } from '@/components/ui/aurora';
 
 export const metadata: Metadata = {
-  title: 'Ajay Sharma | Creative Developer',
+  title: 'Portfolio',
   description: 'The portfolio of Ajay Sharma, a creative developer specializing in React, Next.js, and modern web technologies.',
 };
 
