@@ -38,7 +38,7 @@ export const AuroraBackground = ({
             will-change-transform
             animate-aurora
 
-            [background-image:radial-gradient(ellipse_at_100%_0%,var(--aurora-color-1),transparent_50%),radial-gradient(ellipse_at_0%_100%,var(--aurora-color-2),transparent_50%),radial-gradient(ellipse_at_50%_50%,var(--aurora-color-3),transparent_50%)]
+            [background-image:radial-gradient(ellipse_at_0%_0%,var(--aurora-color-1),transparent_50%),radial-gradient(ellipse_at_100%_100%,var(--aurora-color-2),transparent_50%),radial-gradient(ellipse_at_50%_50%,var(--aurora-color-3),transparent_50%)]
             [background-size:300%_300%,_200%_200%,_400%_400%]
             `
           )}

@@ -75,7 +75,7 @@ export default {
          aurora: {
           purple: 'rgb(82,39,255)',
           green: 'rgb(124,255,103)',
-          'new-purple': 'rgb(159, 122, 234)',
+          'new-purple': 'rgb(82,39,255)',
         }
       },
       borderRadius: {
@@ -105,14 +105,14 @@ export default {
             backgroundPosition: '50% 50%, 50% 50%',
           },
           to: {
-            backgroundPosition: '350% 50%, 350% 50%',
+            backgroundPosition: '350% 350%, 350% 350%',
           },
         },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        aurora: 'aurora 30s linear infinite',
+        aurora: 'aurora 20s linear infinite',
       },
     },
   },
