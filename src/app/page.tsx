@@ -4,6 +4,7 @@ import Hero from '@/components/sections/hero';
 import About from '@/components/sections/about';
 import Skills from '@/components/sections/skills';
 import Projects from '@/components/sections/projects';
+import Experience from '@/components/sections/experience';
 import { Separator } from '@/components/ui/separator';
 
 export default function Home() {
@@ -17,6 +18,10 @@ export default function Home() {
           <Separator />
         </div>
         <Skills />
+        <div className="container">
+          <Separator />
+        </div>
+        <Experience />
         <div className="container">
           <Separator />
         </div>
