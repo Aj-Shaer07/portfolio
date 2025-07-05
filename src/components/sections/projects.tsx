@@ -33,17 +33,18 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="w-full py-20 md:py-32 bg-transparent">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Featured Projects</h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Here are some of the projects I'm proud of. Each one was a unique challenge that I enjoyed solving.
-            </p>
+    <section id="projects" className="w-full section-padding">
+      <div className="container">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+           <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-headline text-secondary-foreground">
+            My Work
           </div>
+          <h2 className="section-heading">Featured Projects</h2>
+          <p className="section-subheading">
+            Here are some of the projects I'm proud of. Each one was a unique challenge that I enjoyed solving.
+          </p>
         </div>
-        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 mt-12">
+        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}

@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Ajay Sharma',
+  title: 'Ajay Sharma | Creative Developer',
   description: 'The portfolio of Ajay Sharma, a creative developer specializing in React, Next.js, and modern web technologies.',
 };
 
@@ -20,13 +20,8 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"></link>
       </head>
-      <body className="font-body antialiased">
-        <div className="relative min-h-dvh">
-           <div className="aurora-wrapper">
-            <div className="aurora-outer">
-              <div className="aurora-inner" />
-            </div>
-          </div>
+      <body className="font-body antialiased bg-background">
+        <div className="relative min-h-dvh bg-gradient-to-tr from-background via-background to-accent/10">
           <div className="relative z-10">
             {children}
           </div>

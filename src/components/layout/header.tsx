@@ -8,7 +8,7 @@ export default function Header() {
         <div className="mr-4 flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <span className="font-bold sm:inline-block font-headline">
-              Portfolio
+              Ajay Sharma
             </span>
           </Link>
           <nav className="hidden sm:flex items-center space-x-6 text-sm font-medium">
@@ -24,13 +24,10 @@ export default function Header() {
             <Link href="#projects" className="transition-colors hover:text-foreground/80 text-foreground/60">
               Projects
             </Link>
-            <Link href="#contact" className="transition-colors hover:text-foreground/80 text-foreground/60">
-              Contact
-            </Link>
           </nav>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-4">
-           <Button asChild>
+           <Button asChild variant="outline">
               <a href="#contact">Contact Me</a>
             </Button>
         </div>

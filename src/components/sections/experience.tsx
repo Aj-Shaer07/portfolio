@@ -26,74 +26,73 @@ const experienceData = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="w-full py-20 md:py-32 bg-transparent">
-      <div className="container px-4 md:px-6">
+    <section id="experience" className="w-full section-padding">
+      <div className="container">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
-          <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm font-headline text-primary-foreground">
+          <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-headline text-secondary-foreground">
             My Journey
           </div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-foreground">Experience & Milestones</h2>
-          <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          <h2 className="section-heading">Experience & Milestones</h2>
+          <p className="section-subheading">
             A timeline of my professional and academic journey so far.
           </p>
         </div>
 
-        {/* Mobile View */}
-        <div className="md:hidden space-y-12">
-          {experienceData.map((item, index) => (
-            <div key={index} className="flex gap-6">
-              <div className="flex flex-col items-center">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center z-10">
-                  {item.icon}
+        <div className="relative">
+          <div className="absolute left-1/2 top-0 h-full w-px bg-border -translate-x-1/2 hidden md:block"></div>
+          
+          <div className="space-y-12 md:space-y-0">
+            {experienceData.map((item, index) => (
+              <div key={index} className="relative">
+                <div className="md:grid md:grid-cols-2 md:gap-12 items-start">
+                  
+                  {/* Left or Right alignment based on index */}
+                  <div className={`md:flex ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'} ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'} `}>
+                    {index % 2 === 0 &&
+                      <div className="p-6 rounded-lg bg-card border w-full max-w-md">
+                        <p className="font-mono text-sm text-muted-foreground">{item.date}</p>
+                        <h3 className="font-headline text-xl font-semibold mt-1">{item.title}</h3>
+                        <p className="text-sm font-medium text-accent mt-1">{item.company}</p>
+                        <p className="text-muted-foreground mt-2">{item.description}</p>
+                      </div>
+                    }
+                  </div>
+
+                  {/* Timeline icon */}
+                  <div className="absolute top-1/2 left-1/2 w-8 h-8 rounded-full bg-accent flex items-center justify-center border-4 border-background -translate-x-1/2 -translate-y-1/2 hidden md:flex">
+                     {item.icon}
+                  </div>
+                  
+                  <div className={`md:flex ${index % 2 !== 0 ? 'md:justify-end' : 'md:justify-start'} ${index % 2 !== 0 ? 'md:text-right' : 'md:text-left'} `}>
+                    {index % 2 !== 0 &&
+                       <div className="p-6 rounded-lg bg-card border w-full max-w-md">
+                         <p className="font-mono text-sm text-muted-foreground">{item.date}</p>
+                         <h3 className="font-headline text-xl font-semibold mt-1">{item.title}</h3>
+                         <p className="text-sm font-medium text-accent mt-1">{item.company}</p>
+                         <p className="text-muted-foreground mt-2">{item.description}</p>
+                       </div>
+                    }
+                  </div>
+
+                  {/* Mobile view card */}
+                  <div className="p-6 rounded-lg bg-card border w-full max-w-md md:hidden mt-4">
+                     <div className="flex items-center gap-4 mb-4">
+                       <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+                         {item.icon}
+                       </div>
+                       <div>
+                         <p className="font-mono text-sm text-muted-foreground">{item.date}</p>
+                         <h3 className="font-headline text-xl font-semibold">{item.title}</h3>
+                       </div>
+                     </div>
+                     <p className="text-sm font-medium text-accent">{item.company}</p>
+                     <p className="text-muted-foreground mt-2">{item.description}</p>
+                   </div>
                 </div>
-                {index < experienceData.length - 1 && (
-                  <div className="w-px h-full bg-border"></div>
-                )}
+                {index < experienceData.length -1 && <div className="h-16 md:hidden"></div>}
               </div>
-              <div className="flex flex-col space-y-1">
-                <p className="font-mono text-sm text-muted-foreground">{item.date}</p>
-                <h3 className="font-headline text-xl font-semibold">{item.title}</h3>
-                <p className="text-sm font-medium text-accent">{item.company}</p>
-                <p className="text-muted-foreground">{item.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Desktop View */}
-        <div className="hidden md:block">
-            <div className="relative w-full py-16">
-                <div className="absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2"></div>
-                <div className="grid grid-cols-3 gap-8">
-                    {experienceData.map((item, index) => {
-                        const isAbove = index % 2 === 0;
-                        return (
-                            <div key={index} className="relative">
-                                {/* Spacer to create height for the grid cell */}
-                                <div className="h-40"></div>
-
-                                {/* Icon on the timeline */}
-                                <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-primary flex items-center justify-center border-4 border-background z-10">
-                                    {item.icon}
-                                </div>
-
-                                {/* Vertical connector */}
-                                <div className={`absolute left-1/2 -translate-x-1/2 w-0.5 bg-border ${isAbove ? 'h-10 bottom-[calc(50%_+_1.5rem)]' : 'h-10 top-[calc(50%_+_1.5rem)]'}`}></div>
-
-                                {/* Content Card */}
-                                <div className={`absolute w-full px-2 text-center transition-transform duration-300 ${isAbove ? 'bottom-[calc(50%_+_4.5rem)] hover:-translate-y-2' : 'top-[calc(50%_+_4.5rem)] hover:translate-y-2'}`}>
-                                    <div className="p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-border/20 shadow-lg">
-                                        <p className="font-mono text-sm text-muted-foreground">{item.date}</p>
-                                        <h3 className="font-headline text-xl font-semibold">{item.title}</h3>
-                                        <p className="text-sm font-medium text-accent">{item.company}</p>
-                                        <p className="text-sm text-muted-foreground mt-2">{item.description}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
-            </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
