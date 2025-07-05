@@ -30,7 +30,7 @@ export default function About() {
               alt="A picture of Ajay Sharma"
               width={500}
               height={500}
-              className="rounded-lg object-cover aspect-square shadow-2xl"
+              className="rounded-full object-cover aspect-square shadow-2xl"
               data-ai-hint="portrait man"
             />
           </div>
