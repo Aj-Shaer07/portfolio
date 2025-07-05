@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="!scroll-smooth dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -21,7 +21,16 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"></link>
       </head>
       <body className="font-body antialiased">
-        {children}
+        <div className="relative min-h-dvh">
+           <div className="aurora-wrapper">
+            <div className="aurora-outer">
+              <div className="aurora-inner" />
+            </div>
+          </div>
+          <div className="relative z-10">
+            {children}
+          </div>
+        </div>
         <Toaster />
       </body>
     </html>
