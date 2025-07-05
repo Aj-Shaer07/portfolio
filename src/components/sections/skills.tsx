@@ -11,12 +11,12 @@ const skillsData = [
   {
     category: 'Programming Languages',
     icon: <Code className="h-6 w-6 text-accent" />,
-    skills: ['JavaScript', 'TypeScript', 'Python', 'Java', 'C++'],
+    skills: ['JavaScript', 'TypeScript', 'Python', 'Java', 'C'],
   },
   {
     category: 'Frameworks & Libraries',
     icon: <Rocket className="h-6 w-6 text-accent" />,
-    skills: ['React', 'Next.js', 'Node.js', 'Express', 'Tailwind CSS'],
+    skills: ['React', 'Next.js', 'Node.js', 'Tailwind CSS'],
   },
   {
     category: 'Databases',

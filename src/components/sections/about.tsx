@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import img from "@/components/IMG_3515.jpeg"
 
 export default function About() {
   return (
@@ -26,12 +27,11 @@ export default function About() {
           </div>
           <div className="flex items-center justify-center">
             <Image
-              src="https://placehold.co/500x500.png"
+              src={img}
               alt="A picture of Ajay Sharma"
-              width={500}
-              height={500}
+              width={380}
+              height={380}
               className="rounded-full object-cover aspect-square shadow-2xl"
-              data-ai-hint="portrait man"
             />
           </div>
         </div>
