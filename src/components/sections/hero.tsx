@@ -6,33 +6,31 @@ export default function Hero() {
   return (
     <section className="w-full py-20 md:py-32 lg:py-40 bg-transparent">
       <div className="container px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-          <div className="flex flex-col justify-center space-y-4">
-            <div className="space-y-4">
-              <h1 className="text-4xl font-bold tracking-tighter sm:text-6xl xl:text-7xl/none font-headline">
-                Ajay Sharma
-              </h1>
-              <p className="text-xl font-medium text-accent md:text-2xl">
-                AI Student & Developer
-              </p>
-              <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                A student at NITK Surathkal (Class of 2028), passionate about Artificial Intelligence, development, and building innovative projects.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Button asChild size="lg">
-                <Link href="#projects">
-                  View My Work
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link href="#contact">
-                  Get in Touch
-                </Link>
-              </Button>
-            </div>
+        <div className="flex flex-col items-center space-y-8 text-center">
+          <div className="space-y-4">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-6xl xl:text-7xl/none font-headline">
+              Ajay Sharma
+            </h1>
+            <p className="text-xl font-medium text-accent md:text-2xl">
+              AI Student & Developer
+            </p>
+            <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl">
+              A student at NITK Surathkal (Class of 2028), passionate about Artificial Intelligence, development, and building innovative projects.
+            </p>
           </div>
-          <div className="hidden lg:flex items-center justify-center">
+          <div className="flex flex-col gap-2 min-[400px]:flex-row">
+            <Button asChild size="lg">
+              <Link href="#projects">
+                View My Work
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <Link href="#contact">
+                Get in Touch
+              </Link>
+            </Button>
+          </div>
+          <div className="w-full max-w-[550px]">
             <Image
               alt="Hero"
               className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
