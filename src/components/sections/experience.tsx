@@ -32,7 +32,7 @@ export default function Experience() {
           <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm font-headline text-primary-foreground">
             My Journey
           </div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Experience & Milestones</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-foreground">Experience & Milestones</h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             A timeline of my professional and academic journey so far.
           </p>
