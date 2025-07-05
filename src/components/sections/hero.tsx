@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -29,16 +28,6 @@ export default function Hero() {
                 Get in Touch
               </Link>
             </Button>
-          </div>
-          <div className="w-full max-w-[550px]">
-            <Image
-              alt="Hero"
-              className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
-              data-ai-hint="abstract developer"
-              height="550"
-              src="https://placehold.co/550x550.png"
-              width="550"
-            />
           </div>
         </div>
       </div>
