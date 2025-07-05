@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
+import { AuroraBackground } from '@/components/ui/aurora';
 
 export const metadata: Metadata = {
   title: 'Ajay Sharma | Creative Developer',
@@ -21,11 +22,9 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"></link>
       </head>
       <body className="font-body antialiased bg-background">
-        <div className="relative min-h-dvh bg-gradient-to-tr from-background via-background to-accent/10">
-          <div className="relative z-10">
+        <AuroraBackground>
             {children}
-          </div>
-        </div>
+        </AuroraBackground>
         <Toaster />
       </body>
     </html>

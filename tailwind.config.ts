@@ -72,6 +72,10 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
+         aurora: {
+          purple: 'rgb(82,39,255)',
+          green: 'rgb(124,255,103)',
+        }
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -95,10 +99,19 @@ export default {
             height: '0',
           },
         },
+        aurora: {
+            from: {
+              transform: "rotate(0deg) scale(1.5)",
+            },
+            to: {
+              transform: "rotate(360deg) scale(1.5)",
+            },
+          },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        aurora: 'aurora 60s linear infinite',
       },
     },
   },
