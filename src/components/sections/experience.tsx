@@ -37,59 +37,24 @@ export default function Experience() {
             A timeline of my professional and academic journey so far.
           </p>
         </div>
-
+        
         <div className="relative">
-          <div className="absolute left-1/2 top-0 h-full w-px bg-border -translate-x-1/2 hidden md:block"></div>
+          <div className="absolute left-4 top-0 h-full border-l border-dashed border-foreground -translate-x-1/2"></div>
           
-          <div className="space-y-12 md:space-y-0">
+          <div className="space-y-12">
             {experienceData.map((item, index) => (
-              <div key={index} className="relative">
-                <div className="md:grid md:grid-cols-2 md:gap-12 items-start">
-                  
-                  {/* Left or Right alignment based on index */}
-                  <div className={`md:flex ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'} ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'} `}>
-                    {index % 2 === 0 &&
-                      <div className="p-6 rounded-lg bg-card border w-full max-w-md">
-                        <p className="font-mono text-sm text-muted-foreground">{item.date}</p>
-                        <h3 className="font-headline text-xl font-semibold mt-1">{item.title}</h3>
-                        <p className="text-sm font-medium text-accent mt-1">{item.company}</p>
-                        <p className="text-muted-foreground mt-2">{item.description}</p>
-                      </div>
-                    }
-                  </div>
+              <div key={index} className="relative pl-12">
 
-                  {/* Timeline icon */}
-                  <div className="absolute top-1/2 left-1/2 w-8 h-8 rounded-full bg-accent flex items-center justify-center border-4 border-background -translate-x-1/2 -translate-y-1/2 hidden md:flex">
-                     {item.icon}
-                  </div>
-                  
-                  <div className={`md:flex ${index % 2 !== 0 ? 'md:justify-end' : 'md:justify-start'} ${index % 2 !== 0 ? 'md:text-right' : 'md:text-left'} `}>
-                    {index % 2 !== 0 &&
-                       <div className="p-6 rounded-lg bg-card border w-full max-w-md">
-                         <p className="font-mono text-sm text-muted-foreground">{item.date}</p>
-                         <h3 className="font-headline text-xl font-semibold mt-1">{item.title}</h3>
-                         <p className="text-sm font-medium text-accent mt-1">{item.company}</p>
-                         <p className="text-muted-foreground mt-2">{item.description}</p>
-                       </div>
-                    }
-                  </div>
-
-                  {/* Mobile view card */}
-                  <div className="p-6 rounded-lg bg-card border w-full max-w-md md:hidden mt-4">
-                     <div className="flex items-center gap-4 mb-4">
-                       <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
-                         {item.icon}
-                       </div>
-                       <div>
-                         <p className="font-mono text-sm text-muted-foreground">{item.date}</p>
-                         <h3 className="font-headline text-xl font-semibold">{item.title}</h3>
-                       </div>
-                     </div>
-                     <p className="text-sm font-medium text-accent">{item.company}</p>
-                     <p className="text-muted-foreground mt-2">{item.description}</p>
-                   </div>
+                <div className="absolute top-1 left-4 w-8 h-8 rounded-full bg-accent flex items-center justify-center border-4 border-background -translate-x-1/2">
+                   {item.icon}
                 </div>
-                {index < experienceData.length -1 && <div className="h-16 md:hidden"></div>}
+                
+                <div className="p-6 rounded-lg bg-card border w-full">
+                  <p className="font-mono text-sm text-muted-foreground">{item.date}</p>
+                  <h3 className="font-headline text-xl font-semibold mt-1">{item.title}</h3>
+                  <p className="text-sm font-medium text-accent mt-1">{item.company}</p>
+                  <p className="text-muted-foreground mt-2">{item.description}</p>
+                </div>
               </div>
             ))}
           </div>
