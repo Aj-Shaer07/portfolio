@@ -75,6 +75,7 @@ export default {
          aurora: {
           purple: 'rgb(82,39,255)',
           green: 'rgb(124,255,103)',
+          'new-purple': 'rgb(159, 122, 234)',
         }
       },
       borderRadius: {
@@ -111,7 +112,7 @@ export default {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        aurora: 'aurora 40s linear infinite',
+        aurora: 'aurora 30s linear infinite',
       },
     },
   },

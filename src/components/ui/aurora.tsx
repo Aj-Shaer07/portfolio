@@ -28,7 +28,7 @@ export const AuroraBackground = ({
             `
             [--aurora-color-1:theme(colors.aurora.purple)]
             [--aurora-color-2:theme(colors.aurora.green)]
-            [--aurora-color-3:theme(colors.aurora.purple)]
+            [--aurora-color-3:theme(colors.aurora.new-purple)]
 
             pointer-events-none
             absolute
