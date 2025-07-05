@@ -12,7 +12,13 @@ import { Wand2, Loader2 } from 'lucide-react';
 import Image from 'next/image';
 
 const writingStyles = ["Professional", "Casual", "Humorous", "Concise", "Enthusiastic"];
-const initialBio = "I am a software developer with experience in React and Next.js. I enjoy building user-friendly interfaces and solving complex problems. In my free time, I contribute to open-source projects.";
+const initialBio = `I am Ajay Sharma, undergrad student of the 2028-NITK batch
+
+I am currently pursuing my B.Tech in Artificial Intelligence and i am passionate about technology and innovation involving other branches of Engineering. I love to explore new ideas and work on projects that challenge my skills.
+
+I love questionning things and exploring activities I never did, trying to perfect them and learn from them. My goal is to learn as much as I can and provide my maximum to make this world better, be it through my work, my ideas, just by being a good person or as an Engineer.
+
+I am always open to new opportunities and collaborations, so feel free to reach out if you share similar interests or have any exciting projects in mind.`;
 
 export default function About() {
   const [bioDraft, setBioDraft] = useState(initialBio);
@@ -74,7 +80,7 @@ export default function About() {
                       value={bioDraft}
                       onChange={(e) => setBioDraft(e.target.value)}
                       placeholder="Enter your current bio..."
-                      rows={5}
+                      rows={10}
                     />
                   </div>
                   <div className="grid gap-2">
