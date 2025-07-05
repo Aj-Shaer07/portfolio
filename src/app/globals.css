@@ -107,7 +107,7 @@
     border-radius: 100%;
     transform: translate(-50%, -50%);
     animation: rotate 20s linear infinite;
-    background-image: conic-gradient(from 180deg at 50% 50%, #3d1e6d 0deg, #6a3093 60deg, #a044ff 120deg, #b375ff 180deg, #c49bff 240deg, #a044ff 300deg, #3d1e6d 360deg);
+    background-image: conic-gradient(from 180deg at 50% 50%, rgb(82, 39, 255) 0deg, rgb(124, 255, 103) 180deg, rgb(82, 39, 255) 360deg);
     filter: blur(120px);
     opacity: 0.3;
   }
