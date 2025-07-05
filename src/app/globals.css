@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   :root {
     --background: 210 40% 98%;
@@ -43,25 +39,25 @@ body {
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
-    --background: 222 84% 5%;
+    --background: 264 39% 12%;
     --foreground: 210 40% 98%;
-    --card: 222 84% 8%;
+    --card: 264 39% 15%;
     --card-foreground: 210 40% 98%;
-    --popover: 222 84% 8%;
+    --popover: 264 39% 15%;
     --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222 84% 5%;
-    --secondary: 216 60% 12%;
+    --primary: 262 80% 62%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 264 39% 20%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 216 60% 12%;
+    --muted: 264 39% 20%;
     --muted-foreground: 215 40% 65%;
-    --accent: 262 80% 68%;
-    --accent-foreground: 222 84% 5%;
+    --accent: 262 80% 75%;
+    --accent-foreground: 264 39% 12%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
-    --border: 216 60% 22%;
-    --input: 216 60% 22%;
-    --ring: 262 80% 68%;
+    --border: 264 39% 25%;
+    --input: 264 39% 25%;
+    --ring: 262 80% 62%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -111,7 +107,7 @@ body {
     border-radius: 100%;
     transform: translate(-50%, -50%);
     animation: rotate 20s linear infinite;
-    background-image: conic-gradient(from 180deg at 50% 50%, #2e2640 0deg, #3e2f5b 60deg, #574f7d 120deg, #957dad 180deg, #d2b4de 240deg, #574f7d 300deg, #2e2640 360deg);
+    background-image: conic-gradient(from 180deg at 50% 50%, #3d1e6d 0deg, #6a3093 60deg, #a044ff 120deg, #b375ff 180deg, #c49bff 240deg, #a044ff 300deg, #3d1e6d 360deg);
     filter: blur(120px);
     opacity: 0.3;
   }

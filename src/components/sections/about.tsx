@@ -39,7 +39,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="w-full py-20 md:py-32 bg-secondary">
+    <section id="about" className="w-full py-20 md:py-32 bg-transparent">
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 md:grid-cols-2 md:gap-16">
           <div className="space-y-4">
