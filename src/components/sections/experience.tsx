@@ -11,10 +11,10 @@ const experienceData = [
   },
   {
     icon: <Rocket className="h-5 w-5 text-primary-foreground" />,
-    date: 'Project',
-    title: 'Portfolio Website',
-    company: 'Personal Project',
-    description: 'Designed and built this personal portfolio using Next.js, React, Tailwind CSS, and Genkit to showcase my skills and projects.',
+    date: 'May-July 2025',
+    title: 'TTYL',
+    company: 'IET SMP 2025',
+    description: 'A terminal based chat system that allows mutltiple clients within a private server to connect and coomunicate with each other in real time packed with Minecraft inspired commands',
   },
   {
     icon: <Briefcase className="h-5 w-5 text-primary-foreground" />,
